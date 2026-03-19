@@ -1,0 +1,7 @@
+mesa[rec]>=3.0.0
+solara
+matplotlib
+pandas
+numpy
+pytest
+pytest-cov

@@ -13,25 +13,33 @@ This repository documents my journey learning Mesa — the Python library for ag
 ## Repository Structure
 
 ```
-├── motivation.md                          # Why I want to contribute to Mesa
+├── CONTRIBUTING_EXAMPLES.md           # The "Gold Template" specification
+├── LICENSE                            # MIT License for open source
+├── README.md                          # This file
+├── .github/workflows/                 # Automated CI/CD
+│   └── run_examples.yml               # GitHub Actions CI for all models
+├── .gitignore                         # Python & Mesa common ignores
+├── motivation.md                      # Why I want to contribute to Mesa
 ├── proposal/
 │   └── gsoc_proposal.md                   # My full GSoC 2026 proposal
 ├── notes/
 │   └── mesa_architecture_guide.md         # Deep-dive into Mesa 3.0+ internals
+├── requirements.txt                   # Project dependencies
 ├── models/
 │   ├── schelling_segregation/             # Model 1: Social Dynamics
 │   │   ├── agents.py                      # SchellingAgent (CellAgent)
 │   │   ├── model.py                       # Schelling (Model)
 │   │   ├── run.py                         # Headless runner + parameter sweep
 │   │   ├── app.py                         # SolaraViz interactive dashboard
+│   │   ├── test_model.py                  # Unit tests for core logic
 │   │   └── README.md                      # Full documentation
 │   └── sir_epidemic/                      # Model 2: Biological Dynamics
 │       ├── agents.py                      # InfectiousAgent (S/I/R states)
 │       ├── model.py                       # SIRModel with DataCollector
 │       ├── run.py                         # Headless runner + SIR curves
 │       ├── app.py                         # SolaraViz interactive dashboard
+│       ├── test_model.py                  # Unit tests for core logic
 │       └── README.md                      # Full documentation
-└── README.md                              # This file
 ```
 
 ---
@@ -99,20 +107,33 @@ Simulates **disease spread** through a population using the classic **Susceptibl
 ## Getting Started
 
 ```bash
-# Install Mesa with visualization support
-pip install "mesa[rec]" matplotlib pandas
+# Clone the repository
+git clone https://github.com/k-a-v-i-n-0-0-2/GSoC-learning-space.git
+cd GSoC-learning-space
 
-# Run the Schelling model (headless)
+# Install dependencies
+pip install -r requirements.txt
+
+# Run a model (headless)
 cd models/schelling_segregation
 python run.py
 
-# Run the SIR model (headless)
-cd models/sir_epidemic
-python run.py
-
-# Run any interactive dashboard
+# Run a model (dashboard)
 solara run app.py
+
+# Run unit tests
+pytest test_model.py
 ```
+
+---
+
+## The "Gold Template" Standards
+
+This repository adheres to a strict [Gold Template](CONTRIBUTING_EXAMPLES.md) for every model. This standard ensures:
+- **Test-Driven Design**: All models have unit tests in `test_model.py`.
+- **Modern Mesa API**: No deprecated schedulers or grid systems.
+- **Interactive UIs**: Standardized `SolaraViz` dashboards.
+- **CI/CD Integration**: Automatically verified by GitHub Actions.
 
 ---
 
