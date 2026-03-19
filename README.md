@@ -108,8 +108,8 @@ Simulates **disease spread** through a population using the classic **Susceptibl
 
 ```bash
 # Clone the repository
-git clone https://github.com/k-a-v-i-n-0-0-2/GSoC-learning-space.git
-cd GSoC-learning-space
+git clone https://github.com/k-a-v-i-n-0-0-2/mesa-gsoc.git
+cd mesa-gsoc
 
 # Install dependencies
 pip install -r requirements.txt

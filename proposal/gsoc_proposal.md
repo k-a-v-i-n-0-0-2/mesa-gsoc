@@ -5,7 +5,7 @@
 **Organization**: Mesa — Agent-Based Modeling in Python  
 **Project Size**: Medium (~175 hours)  
 **Contributor**: Kavin M  
-**GitHub**: [k-a-v-i-n-0-0-2](https://github.com/k-a-v-i-n-0-0-2)  
+**GitHub**: [k-a-v-i-n-0-0-2/mesa-gsoc](https://github.com/k-a-v-i-n-0-0-2/mesa-gsoc)  
 **Email**: kavinm.cse2023@dscet.ac.in  
 **Timezone**: Indian Standard Time (IST / GMT +5:30)
 
